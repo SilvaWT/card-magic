@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>The Game</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="assets/js/api.js"></script>
+
+</head>
+
+<body>
+        <div id="beggin">
+                <h1 class="title">Choose a card and memorize</h1>
+                <div id="initialCards"></div>
+                <br>
+                <button id="continueButton" onClick="first()">Continue</button>
+        </div>
+
+        <div id="scope">
+                <div id="stepOne" class="disable">
+                        <h1 class="title">Choose the row your card is in</h1>
+                        <div onClick="nextStep('firstRow', 'firstStep')" id="firstRow"></div>
+                        <div onClick="nextStep('secondRow', 'firstStep')" id="secondRow"></div>
+                        <div onClick="nextStep('thirdRow', 'firstStep')" id="thirdRow"></div>
+                </div>
+
+                <div id="stepTwo" class="disable">
+                        <h1 class="title">Again, choose the row your card is on </h1>
+                        <div onClick="nextStep('firstRow', 'secondStep')" id="firstRowScd"></div>
+                        <div onClick="nextStep('secondRow', 'secondStep')" id="secondRowScd"></div>
+                        <div onClick="nextStep('thirdRow', 'secondStep')" id="thirdRowScd"></div>
+                </div>
+
+                <div id="stepThree" class="disable">
+                        <h1 class="title">Again, choose the row your card is on </h1>
+                        <div onClick="nextStep('firstRow', 'thirdStep')" id="firstRowThrd"></div>
+                        <div onClick="nextStep('secondRow', 'thirdStep')" id="secondRowThrd"></div>
+                        <div onClick="nextStep('thirdRow', 'thirdStep')" id="thirdRowThrd"></div>
+                </div>
+        </div>
+
+
+        <div id="endStep" class="disable">
+                <h1 class="title">Result:</h1>
+                <div id="result"></div>
+        </div>
+        <script src="assets/js/model.js"></script>
+</body>
+
+</html>

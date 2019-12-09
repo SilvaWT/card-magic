@@ -1,0 +1,62 @@
+body {
+    text-align: center;
+    margin: auto;
+    width: 70%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("https://www.hajapaciencia.com.br/static/solitaire/images/backgrounds/greenfelt-thumb.6617c45a8efb.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.title{
+    margin-top: 10px;
+    color: white;
+}
+
+img {
+    display: inline;
+    width: 100px;
+    margin: 5px 5px 5px 5px;
+}
+
+#scope{
+    margin: 10px;
+}
+
+img:hover{
+    transition: 0.3s;
+    margin: 5px 5px 0 5px;
+}
+
+.disable {
+    display: none;
+}
+
+#firstRow:hover, #secondRow:hover, #thirdRow:hover, #firstRowScd:hover, #secondRowScd:hover, #thirdRowScd:hover, #firstRowThrd:hover, #secondRowThrd:hover, #thirdRowThrd:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.157);
+    transition: 0.4s;
+}
+
+
+#initialCards{
+    display: inline-block;
+    text-align: center;
+    width: 70%;
+}
+
+button{
+    background: none;
+    padding: 10px 100px;
+    border-radius: 50px;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+
+}
+
+button:hover{
+    background-color: white;
+    color: green;
+    transition: 0.3s;
+}
