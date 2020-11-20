@@ -5,7 +5,7 @@ let rowTwo = []
 let rowThree = []
 
 
-function split(cadsToSplit) {
+const split = cadsToSplit => {
     rowOne = []
     rowTwo = []
     rowThree = []
@@ -22,7 +22,7 @@ function split(cadsToSplit) {
     }
 }
 
-function shuffleCards(clickedRow) {
+const shuffleCards = clickedRow => {
     let scrambled = [];
     if (clickedRow == "firstRow") {
         rowTwo.forEach(element => { scrambled.push(element) });
@@ -64,14 +64,14 @@ function showCards(cards) {
 
 };
 
-function first() {
+const first = () => {
     split(cardList)
     renderRows('#firstRow', '#secondRow', '#thirdRow')
     $("#beggin").className = "disable"
     $("#stepOne").className = ""
 }
 
-function nextStep(row, step) {
+const nextStep = (row, step) => {
 
     cardList = shuffleCards(row);
     split(cardList)
@@ -80,24 +80,24 @@ function nextStep(row, step) {
     if (step == "thirdStep") stepFinally();
 }
 
-function stepOne() {
+const stepOne = () => {
     renderRows('#firstRowScd', '#secondRowScd', '#thirdRowScd')
     $("#stepOne").className = "disable"
     $("#stepTwo").className = ""
 }
 
-function stepTwo() {
+const stepTwo = () => {
     renderRows('#firstRowThrd', '#secondRowThrd', '#thirdRowThrd');
     $("#stepTwo").className = "disable"
     $("#stepThree").className = ""
 }
 
-function stepThree() {
+const stepThree = () => {
     $("#stepTwo").className = "disable"
     $("#stepThree").className = ""
 }
 
-function stepFinally() {
+const stepFinally = () => {
     $('#result').innerHTML = `<img src="${cardList[10].image}"></img>`
     $("#stepThree").className = "disable"
     $("#endStep").className = ""
